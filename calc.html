@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator </title>
+
+    <style>
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Calculator </h1>
+
+
+    <div>
+        <div>
+            <p> Число 1 <input type="text" id="num1"></p>
+            <p> Число 2 <input type="text" id="num2"></p>
+        </div>
+
+        <div>
+            <input type="button" onclick="pluse()" value="+" />
+            <input type="button" onclick="subtraction()" value="-" />
+            <input type="button" onclick="multiplication()" value="*" />
+            <input type="button" onclick="division()" value="/" />
+        </div>
+        <div>
+            <p> Ответ: </p>
+            <p id="out"></p>
+        </div>
+    </div>
+
+
+    <script>
+
+        function pluse() {
+            let num1, num2, result;
+
+            num1 = document.getElementById('num1').value;
+            num1 = parseInt(num1)
+
+            num2 = document.getElementById('num2').value;
+            num2 = parseInt(num2);
+
+            result = Calculator.sum(num1, num2);
+            document.getElementById('out').innerHTML = result;
+        }
+
+        function subtraction() {
+            let num1, num2, result;
+
+            num1 = document.getElementById('num1').value;
+            num1 = parseInt(num1)
+
+            num2 = document.getElementById('num2').value;
+            num2 = parseInt(num2);
+
+            result = Calculator.sub(num1, num2);
+            document.getElementById('out').innerHTML = result;
+        }
+
+        function multiplication() {
+            let num1, num2, result;
+
+            num1 = document.getElementById('num1').value;
+            num1 = parseInt(num1)
+
+
+            num2 = document.getElementById('num2').value;
+            num2 = parseInt(num2);
+
+            result = Calculator.mult(num1, num2);
+            document.getElementById('out').innerHTML = result;
+        }
+
+        function division() {
+            let num1, num2, result;
+
+            num1 = document.getElementById('num1').value;
+            num1 = parseInt(num1)
+
+
+            num2 = document.getElementById('num2').value;
+            num2 = parseInt(num2);
+
+            result = Calculator.div(num1, num2);
+            document.getElementById('out').innerHTML = result;
+        }
+
+        class Calculator {
+            static sum(num1, num2) {
+                return num1 + num2
+            }
+            static sub(num1, num2) {
+                return num1 - num2
+            }
+            static mult(num1, num2) {
+                return num1 * num2
+            }
+            static div(num1, num2) {
+                if (num2 == 0) {
+                    alert(" На ноль делить нельзя!")
+                    return 0;
+                } else {
+                    return num1 / num2
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
