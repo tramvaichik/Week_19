@@ -5,46 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/worker.css">
     <title>Worker</title>
-    <style>
-        h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-align: center;
-            color: rgb(3, 3, 58);
-        }
-    </style>
 </head>
 
 <body>
     <h1> Карточка работника <br> Изюмовой Булочки </h1>
 
 
-    <script>
-
-        class Worker {
-            constructor(name, surname, rate, days) {
-
-                this.name = name;
-                this.surname = surname;
-                this.rate = rate;
-                this.days = days;
-            }
-
-            getSalary() {
-                let result = this.rate * this.days;
-                return result;
-            }
-
-        }
-
-        let worker = new Worker("Булочка", "Изюмова", 15, 28)
-
-        console.log(worker.name);
-        console.log(worker.surname);
-        console.log(worker.rate);
-        console.log(worker.days);
-        console.log(worker.getSalary());
-    </script>
+    <script src="/assets/js/worker.js"></script>
 </body>
 
 </html>
